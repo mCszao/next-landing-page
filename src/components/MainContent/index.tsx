@@ -3,6 +3,7 @@ import AssetHeader from '../../assets/images/asset-header.png';
 import { BaseSection } from './BaseSection';
 import Graphic from '../../assets/images/comparativo_img_CTA.png';
 import GetDemoContaner from '../GetDemoContainer';
+import GridList from '../GridListVideos';
 export default function MainContent() {
     return (
         <main className='font-jakarta'>
@@ -10,9 +11,7 @@ export default function MainContent() {
                 <h3 className='pr-3 pl-3  font-bold text-sm border-2 border-primaryBlue rounded-t-xl rounded-br-xl text-primaryBlue hover:bg-primaryBlue hover:text-white transition h-7'>
                     WEBINARS EXCLUSIVOS
                 </h3>
-                <h2 className='text-textColor1 text-5xl'>
-                    Menos Conversinha,
-                </h2>
+                <h2 className='text-textColor1 text-5xl'>Menos Conversinha,</h2>
                 <div className='relative'>
                     <h1 className='text-primaryBlue text-7xl  font-semibold static  '>
                         Mais Conversão
@@ -30,14 +29,10 @@ export default function MainContent() {
                     como aplicá-las no seu negócio
                 </p>
             </BaseSection>
-            <BaseSection isBlue={false} isEvenly={false}>
-                <div className='grid grid-cols-4'>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                </div>
-                <p>1</p>
+            <BaseSection isBlue={false} isEvenly={false} isColumn={true}>
+                <div>A</div>
+                <GridList />
+                <div>A</div>
             </BaseSection>
             <BaseSection isBlue={true} isColumn={false} isEvenly={true}>
                 <Image
