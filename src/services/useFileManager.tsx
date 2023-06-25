@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import Data from '../config.json';
+import { IVideos } from '@/interface/IVideos';
 
 export default function FileManager() {
-    const ReadFile = () => {
-        console.log(Data);
+    const [data, setData] = useState<IVideos>();
+    const readFileByLabel = (label: string) => {
+        return Object.keys(label);
     };
-    return { ReadFile };
+    return { readFileByLabel };
 }
