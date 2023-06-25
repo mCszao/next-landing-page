@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/react';
 import { FaFacebook, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import ListHeader from './ListHeader';
-import SocialButton from '../SocialButton';
+
 export default function Footer() {
     return (
         <Box
@@ -91,11 +91,12 @@ export default function Footer() {
                     justify={{ md: 'space-between' }}
                     margin={'1rem'}
                     color={'gray'}
+                    alignItems={'center'}
                 >
                     <Text>
-                        Copyright &copy; 2015-2022 Todos os diretiso reservados
+                        Copyright &copy; 2015-2022 Todos os direitos reservados
                         <Link
-                            className='font-jakarta text-primaryBlue'
+                            className='font-jakarta text-primaryBlue m-1'
                             href='https://leadster.com.br/'
                         >
                             Leadster
