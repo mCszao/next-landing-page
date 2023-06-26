@@ -1,38 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next Landing Page
 
-## Getting Started
+Landing Page criada utilizando NextJS em conjunto com outras bibliotecas afim de construir uma página com visual e efeitos confortáveis, utilizando o que há de bom no React.
 
-First, run the development server:
+## Requisitos de Instalação
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Certifique-se de ter as seguintes dependências instaladas antes de executar a landing page:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- ChakraUI (https://chakra-ui.com/getting-started)
+- StyledComponents (https://styled-components.com/)
+- TailwindCSS (https://tailwindcss.com/docs/installation)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Como Usar
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+1. Clone este repositório em sua máquina.
+2. Abra o terminal e navegue até o diretório do projeto.
+3. Execute o comando `npm install` ou `yarn install` para instalar as dependências.
+4. Execute o comando `npm run dev` ou `yarn dev` para iniciar o servidor de desenvolvimento.
+5. Acesse a landing page em seu navegador usando o endereço `http://localhost:3000`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Autor
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Marcos "mCs" Vinicius
 
-## Learn More
+## Organização
 
-To learn more about Next.js, take a look at the following resources:
+Os componentes foram organizados visando a escalabilidade da aplicação, sempre que possível tentando manter a parte logica e a parte visual em camadas diferentes utilizando uma camada intermediária. Aplicação de componentização com semântica e acessibilidade em nível básico de aplicação.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
