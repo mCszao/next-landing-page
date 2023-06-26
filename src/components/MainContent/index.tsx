@@ -4,7 +4,16 @@ import { BaseSection } from './BaseSection';
 import Graphic from '../../assets/images/comparativo_img_CTA.png';
 import GetDemoContaner from '../GetDemoContainer';
 import GridList from '../GridListVideos';
+import HeaderGridList from '../HeaderGridList';
+import FooterGridList from '../FooterGridList';
+import SelectorButton from '../SelectorButton';
+import { useFileManager } from '@/hooks/useFileManager';
+
+import { useState } from 'react';
+
 export default function MainContent() {
+    const { currentData, setFilter } = useFileManager();
+
     return (
         <main className='font-jakarta'>
             <BaseSection isBlue={true} isColumn={true} isEvenly={false}>
@@ -30,9 +39,44 @@ export default function MainContent() {
                 </p>
             </BaseSection>
             <BaseSection isBlue={false} isEvenly={false} isColumn={true}>
-                <div>A</div>
-                <GridList />
-                <div>A</div>
+                <HeaderGridList
+                    navButtons={[
+                        <SelectorButton
+                            text='Agência'
+                            type='button'
+                            key={1}
+                            clickFunction={() => setFilter('agency')}
+                        />,
+                        <SelectorButton
+                            text='ChatBot'
+                            type='button'
+                            key={2}
+                            clickFunction={() => setFilter('chatBot')}
+                        />,
+                        <SelectorButton
+                            text='Marketing Digital'
+                            type='button'
+                            key={3}
+                            clickFunction={() => setFilter('marketing')}
+                        />,
+                        <SelectorButton
+                            text='Geração de Leads'
+                            type='button'
+                            key={4}
+                            clickFunction={() => setFilter('leadGeneration')}
+                        />,
+                        <SelectorButton
+                            text='Mídia Paga'
+                            type='button'
+                            key={4}
+                            clickFunction={() => setFilter('paidMedia')}
+                        />,
+                    ]}
+                />
+                <hr className=' bg-textColor1 w-3/4' />
+                <GridList currentData={currentData} />
+                <hr className=' bg-textColor1 w-3/4' />
+                <FooterGridList />
             </BaseSection>
             <BaseSection isBlue={true} isColumn={false} isEvenly={true}>
                 <Image
