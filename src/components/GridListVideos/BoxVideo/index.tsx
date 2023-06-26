@@ -17,13 +17,13 @@ export default function BoxVideo({ id, title, onClick }: IBoxVideoProps) {
             onClick={() => onClick()}
         >
             <StyledImageContainer>
-                <div>
+                <header>
                     <Image
                         src={Thumb}
                         alt='Thumbnail do vídeo'
                         className='rounded-t-lg w-full'
                     />
-                </div>
+                </header>
                 <FaPlay color='#0084ff' size={'3em'} className='icon' />
             </StyledImageContainer>
             <h3 className='m-4'>{title}</h3>

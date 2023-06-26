@@ -4,7 +4,7 @@ export const StyledImageContainer = styled.div`
     position: relative;
     box-sizing: border-box;
 
-    & > div {
+    & > header {
         overflow: hidden;
     }
     img {

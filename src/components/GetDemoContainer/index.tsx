@@ -7,7 +7,7 @@ import Stars from '../../assets/images/rating.webp';
 
 export default function GetDemoContaner() {
     return (
-        <div className='flex flex-col gap-1'>
+        <article className='flex flex-col gap-1'>
             <h3 className='text-textColor1 text-3xl text-left'>
                 Pronto para triplicar sua
             </h3>
@@ -43,6 +43,6 @@ export default function GetDemoContaner() {
                     alt='4.9/5 média de satisfação'
                 />
             </div>
-        </div>
+        </article>
     );
 }
