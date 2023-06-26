@@ -6,4 +6,12 @@ export const StyledGridList = styled.div`
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     place-items: center;
+    transition: 0.2s ease all;
+
+    @media (max-width: 720px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 `;
