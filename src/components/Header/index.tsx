@@ -4,7 +4,7 @@ import { StyledHeader } from './StyledHeader';
 export default function Header() {
     return (
         <StyledHeader>
-            <Image src={Logo} alt={'Logo'} />
+            <Image src={Logo} alt={'Logo'} className='w-32' />
         </StyledHeader>
     );
 }
