@@ -1,8 +1,5 @@
-export interface IButtonNumberProps {
-    pageNumber: string | number;
-    callback: () => void;
-    description: string;
-}
+import { IButtonNumberProps } from '@/interface/IButtonNumberProps';
+
 export default function ButtonNumber({
     pageNumber,
     callback,

@@ -1,9 +1,6 @@
+import { IArquiveDownloadButtonProps } from '@/interface/IArquiveDownloadButtonProps';
 import { GiCloudDownload } from 'react-icons/gi';
-interface IArquiveDownloadButtonProps {
-    text: string;
-    color?: string;
-    description: string;
-}
+
 export default function ArquiveDownloadButton({
     text,
     color,

@@ -2,12 +2,8 @@ import Image, { StaticImageData } from 'next/image';
 import Thumb from '../../../assets/images/thumbnail.png';
 import { StyledImageContainer } from './StyledImageContainer';
 import { FaPlay } from 'react-icons/fa';
-export interface IBoxVideoProps {
-    id?: number;
-    image?: StaticImageData;
-    title: string;
-    onClick: () => void;
-}
+import { IBoxVideoProps } from '@/interface/IBoxVideoProps';
+
 export default function BoxVideo({ id, title, onClick }: IBoxVideoProps) {
     return (
         <article

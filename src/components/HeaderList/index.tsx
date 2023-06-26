@@ -1,7 +1,6 @@
-interface IHeaderGridListProps {
-    navButtons?: JSX.Element | JSX.Element[];
-}
-export default function HeaderGridList({ navButtons }: IHeaderGridListProps) {
+import { IHeaderListProps } from '@/interface/IHeaderListProps';
+
+export default function HeaderList({ navButtons }: IHeaderListProps) {
     return (
         <section className='flex justify-evenly w-full'>
             <nav className='flex gap-4 flex-wrap justify-center'>

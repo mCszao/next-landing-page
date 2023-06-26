@@ -1,13 +1,11 @@
 import { useState } from 'react';
 import ModalBase from '../ModalBase';
 import BoxVideo from './BoxVideo';
-import { StyledList } from './StyledGridList';
+import { StyledList } from './StyledList';
 import { IVideos } from '@/interface/IVideos';
+import { IListProps } from '@/interface/IListProps';
 
-interface IGridListProps {
-    currentData: any;
-}
-export default function ListVideos({ currentData }: IGridListProps) {
+export default function ListVideos({ currentData }: IListProps) {
     const [isOpen, setIsOpen] = useState(false);
     const [currentVideo, setCurrentVideo] = useState<IVideos | undefined>(
         undefined

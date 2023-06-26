@@ -1,8 +1,5 @@
-export interface ISelectorButtonProps {
-    text: string;
-    type: 'button' | 'submit' | 'reset' | undefined;
-    clickFunction: () => void;
-}
+import { ISelectorButtonProps } from '@/interface/ISelectorButtonProps';
+
 export default function SelectorButton({
     text,
     type,

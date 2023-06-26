@@ -1,6 +1,4 @@
-import { IVideos } from '@/interface/IVideos';
 import {
-    Button,
     Modal,
     ModalBody,
     ModalCloseButton,
@@ -11,12 +9,8 @@ import {
 } from '@chakra-ui/react';
 import ArquiveDownloadButton from '../ArquiveDownloadButton';
 import TitleWithBottomHr from '../TitleWithBottomHr';
+import { IModalBaseProps } from '@/interface/IModalBaseProps';
 
-interface IModalBaseProps {
-    isModalOpen: boolean;
-    callback: () => void;
-    model?: IVideos;
-}
 export default function ModalBase({
     isModalOpen,
     callback,

@@ -1,6 +1,5 @@
-export interface ITitleWithBottomHrProps {
-    text: string;
-}
+import { ITitleWithBottomHrProps } from '@/interface/ITitleWithBottomHrProps';
+
 export default function TitleWithBottomHr({ text }: ITitleWithBottomHrProps) {
     return (
         <header>

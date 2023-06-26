@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import fs from 'fs';
 import Selo from '../../assets/images/selo_RD.png';
 import NotCard from '../../assets/images/no-card-dark.webp';
 import BoxImageText from './BoxImageText';

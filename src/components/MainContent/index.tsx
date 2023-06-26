@@ -3,12 +3,12 @@ import AssetHeader from '../../assets/images/asset-header.png';
 import { BaseSection } from './BaseSection';
 import Graphic from '../../assets/images/comparativo_img_CTA.png';
 import GetDemoContaner from '../GetDemoContainer';
-import HeaderGridList from '../HeaderGridList';
-import FooterGridList from '../FooterGridList';
+import HeaderGridList from '../HeaderList';
+import FooterGridList from '../FooterList';
 import SelectorButton from '../SelectorButton';
 import { useFileManager } from '@/hooks/useFileManager';
-import ButtonNumber from '../FooterGridList/ButtonNumber';
-import ListVideos from '../GridListVideos';
+import ButtonNumber from '../FooterList/ButtonNumber';
+import ListVideos from '../ListVideos';
 
 export default function MainContent() {
     const { currentData, setFilter, totalPages, setCurrentPage } =
@@ -94,6 +94,7 @@ export default function MainContent() {
                     pageButtons={Array.from(Array(totalPages), (item, i) => {
                         return (
                             <ButtonNumber
+                                description='Botão para navegar entre páginas'
                                 pageNumber={i + 1}
                                 key={i}
                                 callback={() => setCurrentPage(i)}
