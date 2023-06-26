@@ -9,11 +9,13 @@ import {
     ModalHeader,
     ModalOverlay,
 } from '@chakra-ui/react';
+import ArquiveDownloadButton from '../ArquiveDownloadButton';
+import TitleWithBottomHr from '../TitleWithBottomHr';
 
 interface IModalBaseProps {
     isModalOpen: boolean;
     callback: () => void;
-    model: IVideos;
+    model?: IVideos;
 }
 export default function ModalBase({
     isModalOpen,
@@ -28,17 +30,55 @@ export default function ModalBase({
                 <hr className='w-full h-1 bg-textColor2 rounded-t-lg relative  border-none' />
                 <ModalHeader>
                     <span className='text-primaryBlue mr-1'>Webinar:</span>
-                    {model.title}
+                    {model?.title}
                 </ModalHeader>
                 <ModalCloseButton />
-                <ModalBody>
-                    <p>{model.link}</p>
+                <ModalBody padding={'0'}>
+                    <iframe
+                        className='relative w-full h-64'
+                        src={model?.link}
+                        title='YouTube video player'
+                        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                    ></iframe>
                 </ModalBody>
 
-                <ModalFooter>
-                    <Button colorScheme='blue' mr={3} onClick={callback}>
-                        Fechar
-                    </Button>
+                <ModalFooter
+                    display={'flex'}
+                    flexDir={'column'}
+                    alignItems={'start'}
+                    gap={'.5rem'}
+                >
+                    <article className='flex flex-col gap-2 '>
+                        <TitleWithBottomHr text='Descrição' />
+                        <p className='font-medium text-sm'>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Voluptates dolores suscipit expedita
+                            aspernatur nesciunt alias amet doloribus sed dolore
+                            a dignissimos quaerat quod, iure blanditiis dolor
+                            molestiae pariatur ipsam fugiat?
+                        </p>
+                    </article>
+                    <article className='flex flex-col gap-2  '>
+                        <TitleWithBottomHr text='Downloads' />
+                        <div role='dowloads' className='flex gap-3 '>
+                            <ArquiveDownloadButton
+                                text='Spreadsheet.xls'
+                                description='Botão de download de arquivo em formato xls'
+                                color='#9ceddd'
+                            />
+
+                            <ArquiveDownloadButton
+                                text='Document.doc'
+                                description='Botão de download de arquivo em formato doc'
+                                color='#a1d9ff'
+                            />
+                            <ArquiveDownloadButton
+                                text='Presentation.ppt'
+                                description='Botão de download de arquivo em formato ppt'
+                                color='#fff1a0'
+                            />
+                        </div>
+                    </article>
                 </ModalFooter>
             </ModalContent>
         </Modal>
