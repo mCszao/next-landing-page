@@ -6,16 +6,24 @@ import {
     Text,
     Link,
     useColorModeValue,
+    Flex,
 } from '@chakra-ui/react';
 import { FaFacebook, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import ListHeader from './ListHeader';
-
+import Logo from '../../assets/images/logo.png';
+import Image from 'next/image';
 export default function Footer() {
     return (
         <Box
             color={useColorModeValue('gray.700', 'gray.200')}
-            className='font-semibold'
+            className='font-semibold flex flex-col items-center'
         >
+            <Flex direction='column'>
+                <Image src={Logo} alt='Logo da empresa' className='m-2' />
+                <span className='font-light text-sm'>
+                    Transformando visitantes em clientes
+                </span>
+            </Flex>
             <Container as={Stack} maxW={'6xl'} py={10}>
                 <SimpleGrid
                     columns={{ base: 1, sm: 2, md: 4 }}
