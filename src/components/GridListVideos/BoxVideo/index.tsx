@@ -13,7 +13,7 @@ export default function BoxVideo({ id, title, onClick }: IBoxVideoProps) {
         <article
             key={id}
             style={{ boxShadow: '5px 10px 15px rgba(0, 0, 0, 0.123)' }}
-            className=' rounded-lg w-72 relative flex flex-col justify-center box-border hover:cursor-pointer transition hover:text-primaryBlue font-semibold'
+            className=' rounded-lg lg:w-72 relative flex flex-col justify-center box-border hover:cursor-pointer transition hover:text-primaryBlue font-semibold'
             onClick={() => onClick()}
         >
             <StyledImageContainer>
@@ -21,7 +21,7 @@ export default function BoxVideo({ id, title, onClick }: IBoxVideoProps) {
                     <Image
                         src={Thumb}
                         alt='Thumbnail do vídeo'
-                        className='rounded-t-lg '
+                        className='rounded-t-lg w-full'
                     />
                 </div>
                 <FaPlay color='#0084ff' size={'3em'} className='icon' />

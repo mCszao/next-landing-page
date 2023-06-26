@@ -3,14 +3,12 @@ import AssetHeader from '../../assets/images/asset-header.png';
 import { BaseSection } from './BaseSection';
 import Graphic from '../../assets/images/comparativo_img_CTA.png';
 import GetDemoContaner from '../GetDemoContainer';
-import GridList from '../GridListVideos';
 import HeaderGridList from '../HeaderGridList';
 import FooterGridList from '../FooterGridList';
 import SelectorButton from '../SelectorButton';
 import { useFileManager } from '@/hooks/useFileManager';
-
-import { useState } from 'react';
 import ButtonNumber from '../FooterGridList/ButtonNumber';
+import ListVideos from '../GridListVideos';
 
 export default function MainContent() {
     const { currentData, setFilter, totalPages, setCurrentPage } =
@@ -30,7 +28,7 @@ export default function MainContent() {
                     <Image
                         src={AssetHeader}
                         alt='Chapéu em uma palavra com parte da logo'
-                        className='absolute top-0 -right-4'
+                        className='absolute  opacity-0 sm:top-0 sm:-right-4 sm:opacity-100'
                     />
                 </div>
 
@@ -90,7 +88,7 @@ export default function MainContent() {
                     ]}
                 />
                 <hr className=' bg-textColor1 w-3/4' />
-                <GridList currentData={currentData} />
+                <ListVideos currentData={currentData} />
                 <hr className=' bg-textColor1 w-3/4' />
                 <FooterGridList
                     pageButtons={Array.from(Array(totalPages), (item, i) => {

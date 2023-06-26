@@ -1,19 +1,19 @@
 import { useState } from 'react';
 import ModalBase from '../ModalBase';
 import BoxVideo from './BoxVideo';
-import { StyledGridList } from './StyledGridList';
+import { StyledList } from './StyledGridList';
 import { IVideos } from '@/interface/IVideos';
 
 interface IGridListProps {
     currentData: any;
 }
-export default function GridList({ currentData }: IGridListProps) {
+export default function ListVideos({ currentData }: IGridListProps) {
     const [isOpen, setIsOpen] = useState(false);
     const [currentVideo, setCurrentVideo] = useState<IVideos | undefined>(
         undefined
     );
     return (
-        <StyledGridList>
+        <StyledList>
             {currentData.map((item: any) => (
                 <BoxVideo
                     id={item.id}
@@ -32,6 +32,6 @@ export default function GridList({ currentData }: IGridListProps) {
                 }}
                 model={currentVideo}
             />
-        </StyledGridList>
+        </StyledList>
     );
 }
