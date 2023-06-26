@@ -8,13 +8,10 @@ interface IGridListProps {
     currentData: any;
 }
 export default function GridList({ currentData }: IGridListProps) {
-    const [isOpen, setIsOpen] = useState(true);
-    const [currentVideo, setCurrentVideo] = useState<IVideos>({
-        category: 'teste',
-        date: '202323',
-        link: 'aslakjslkas',
-        title: 'testefeito',
-    });
+    const [isOpen, setIsOpen] = useState(false);
+    const [currentVideo, setCurrentVideo] = useState<IVideos | undefined>(
+        undefined
+    );
     return (
         <StyledGridList>
             {currentData.map((item: any) => (
