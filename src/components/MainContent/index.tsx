@@ -10,9 +10,11 @@ import SelectorButton from '../SelectorButton';
 import { useFileManager } from '@/hooks/useFileManager';
 
 import { useState } from 'react';
+import ButtonNumber from '../FooterGridList/ButtonNumber';
 
 export default function MainContent() {
-    const { currentData, setFilter } = useFileManager();
+    const { currentData, setFilter, totalPages, setCurrentPage } =
+        useFileManager();
 
     return (
         <main className='font-jakarta'>
@@ -45,38 +47,62 @@ export default function MainContent() {
                             text='Agência'
                             type='button'
                             key={1}
-                            clickFunction={() => setFilter('agency')}
+                            clickFunction={() => {
+                                setFilter('agency');
+                            }}
                         />,
                         <SelectorButton
                             text='ChatBot'
                             type='button'
                             key={2}
-                            clickFunction={() => setFilter('chatBot')}
+                            clickFunction={() => {
+                                setFilter('chatBot');
+                                setCurrentPage(0);
+                            }}
                         />,
                         <SelectorButton
                             text='Marketing Digital'
                             type='button'
                             key={3}
-                            clickFunction={() => setFilter('marketing')}
+                            clickFunction={() => {
+                                setFilter('marketing');
+                                setCurrentPage(0);
+                            }}
                         />,
                         <SelectorButton
                             text='Geração de Leads'
                             type='button'
                             key={4}
-                            clickFunction={() => setFilter('leadGeneration')}
+                            clickFunction={() => {
+                                setFilter('leadGeneration');
+                                setCurrentPage(0);
+                            }}
                         />,
                         <SelectorButton
                             text='Mídia Paga'
                             type='button'
-                            key={4}
-                            clickFunction={() => setFilter('paidMedia')}
+                            key={5}
+                            clickFunction={() => {
+                                setFilter('paidMedia');
+                                setCurrentPage(0);
+                            }}
                         />,
                     ]}
                 />
                 <hr className=' bg-textColor1 w-3/4' />
                 <GridList currentData={currentData} />
                 <hr className=' bg-textColor1 w-3/4' />
-                <FooterGridList />
+                <FooterGridList
+                    pageButtons={Array.from(Array(totalPages), (item, i) => {
+                        return (
+                            <ButtonNumber
+                                pageNumber={i + 1}
+                                key={i}
+                                callback={() => setCurrentPage(i)}
+                            />
+                        );
+                    })}
+                />
             </BaseSection>
             <BaseSection isBlue={true} isColumn={false} isEvenly={true}>
                 <Image
