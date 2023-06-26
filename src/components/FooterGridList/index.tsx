@@ -1,13 +1,12 @@
 import ButtonNumber from './ButtonNumber';
-
-export default function FooterGridList() {
+export interface IFooterGridList {
+    pageButtons: JSX.Element | JSX.Element[];
+}
+export default function FooterGridList({ pageButtons }: IFooterGridList) {
     return (
         <nav className='flex font-semibold gap-4 items-center trasition'>
             <span>Página</span>
-            <ButtonNumber pageNumber={1} />
-            <ButtonNumber pageNumber={2} />
-            <ButtonNumber pageNumber={3} />
-            <ButtonNumber pageNumber={4} />
+            {pageButtons}
         </nav>
     );
 }
