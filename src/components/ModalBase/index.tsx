@@ -52,9 +52,12 @@ export default function ModalBase({
                             molestiae pariatur ipsam fugiat?
                         </p>
                     </article>
-                    <article className='flex flex-col gap-2  '>
+                    <article className='flex flex-col gap-2  w-full'>
                         <TitleWithBottomHr text='Downloads' />
-                        <div role='dowloads' className='flex gap-3 '>
+                        <div
+                            role='dowloads'
+                            className='flex flex-col items-center sm:flex-row gap-2 '
+                        >
                             <ArquiveDownloadButton
                                 text='Spreadsheet.xls'
                                 description='Botão de download de arquivo em formato xls'

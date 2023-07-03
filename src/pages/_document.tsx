@@ -8,7 +8,7 @@ import Header from '@/components/Header';
 export default function Document() {
     return (
         <Html lang='pt-br'>
-            <Head />
+            <Head title='Leadster' />
             <body>
                 <Main />
                 <NextScript />
